@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 62.5%;
+  /* 10px */
+}
+
+body {
+  background: url("../images/bg-pattern.svg") no-repeat;
+  background-size: 200rem 50rem;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+header,
+.container {
+  font-size: 1.5rem;
+  color: hsl(227deg, 35%, 25%);
+}
+
+header {
+  position: relative;
+  height: 1.5rem;
+  width: 40rem;
+  margin: auto;
+}
+header .header-circles {
+  position: absolute;
+  transform: translate(50%);
+  left: 5rem;
+  top: -2rem;
+}
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-top: 8rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+header p {
+  font-size: 1.5rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+  gap: 1.2rem;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(2.4rem);
+}
+
+.label {
+  position: relative;
+  background-color: hsl(223deg, 50%, 87%);
+  border-radius: 5rem;
+  padding: 0.5rem;
+  margin: 0 1rem;
+  width: 5rem;
+  height: 2.6rem;
+  cursor: pointer;
+}
+.label:active {
+  background-color: hsl(174deg, 86%, 45%);
+}
+
+.ball {
+  background: #fff;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  border-radius: 5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: transform 0.15s linear;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 1rem;
+  background: hsl(174deg, 86%, 45%);
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px hsl(174deg, 86%, 45%);
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat;
+  background-position: center center;
+  background-size: auto;
+  background-color: hsl(174deg, 66%, 33%);
+  box-shadow: 2px 2px 2px hsl(174deg, 86%, 45%);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: hsl(174deg, 66%, 33%);
+  cursor: pointer;
+}
+
+.container {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  color: hsl(225deg, 20%, 60%);
+  width: 55rem;
+  height: 40rem;
+  margin: 5rem auto;
+  margin-top: 20rem;
+  box-shadow: 0 0.8rem 2rem hsla(0deg, 0%, 0%, 0.1);
+}
+.container .title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 3rem 5rem 1.5rem 5rem;
+  align-items: center;
+}
+.container .title h4 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  justify-self: start;
+}
+.container .title .price {
+  justify-self: end;
+}
+.container .title .price span {
+  font-size: 4rem;
+  color: hsl(227deg, 35%, 25%);
+}
+.container .title input {
+  grid-column: 1/span 2;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+.flex ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn {
+  background-color: hsl(227deg, 35%, 25%);
+  border-radius: 3rem;
+  padding: 0.1rem 2rem;
+  color: hsl(226deg, 100%, 87%);
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: 2px solid hsl(227deg, 35%, 25%);
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: 0.1rem 0.1rem 0.5rem hsl(227deg, 35%, 25%);
+}
+.btn:hover {
+  background-color: transparent;
+  color: hsl(227deg, 35%, 25%);
+}
+
+.name {
+  font-size: 1.4rem;
+}
+.name span {
+  color: hsl(15deg, 100%, 70%);
+  background-color: hsl(14deg, 92%, 95%);
+  font-size: 1.2rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
