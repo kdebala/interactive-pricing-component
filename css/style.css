@@ -46,22 +46,33 @@ header p {
   font-size: 1.5rem;
 }
 
-.toggle {
+.container {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  color: hsl(225deg, 20%, 60%);
+  width: 55rem;
+  height: 40rem;
+  margin: 5rem auto;
+  margin-top: 20rem;
+  box-shadow: 0 0.8rem 2rem hsla(0deg, 0%, 0%, 0.1);
+}
+.container .toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 2.5rem 0;
   gap: 1.2rem;
 }
-
-.checkbox {
+.container .checkbox {
   display: none;
 }
-.checkbox:checked + .label .ball {
+.container .checkbox:checked + .label .ball {
   transform: translateX(2.4rem);
 }
-
-.label {
+.container .checkbox:checked + .label {
+  background-color: hsl(174deg, 86%, 45%);
+}
+.container .label {
   position: relative;
   background-color: hsl(223deg, 50%, 87%);
   border-radius: 5rem;
@@ -71,11 +82,10 @@ header p {
   height: 2.6rem;
   cursor: pointer;
 }
-.label:active {
+.container .label:active {
   background-color: hsl(174deg, 86%, 45%);
 }
-
-.ball {
+.container .ball {
   background: #fff;
   position: absolute;
   top: 0.2rem;
@@ -85,8 +95,7 @@ header p {
   height: 2.2rem;
   transition: transform 0.15s linear;
 }
-
-.slider {
+.container .slider {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -97,13 +106,11 @@ header p {
   opacity: 0.7;
   transition: opacity 0.2s;
   border-radius: 30px;
-  box-shadow: 2px 2px 2px hsl(174deg, 86%, 45%);
 }
-.slider:hover {
+.container .slider:hover {
   opacity: 1;
 }
-
-.slider::-webkit-slider-thumb {
+.container .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 35px;
@@ -113,28 +120,15 @@ header p {
   background-position: center center;
   background-size: auto;
   background-color: hsl(174deg, 66%, 33%);
-  box-shadow: 2px 2px 2px hsl(174deg, 86%, 45%);
   cursor: pointer;
 }
-
-.slider::-moz-range-thumb {
+.container .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background: url("../images/icon-slider.svg") no-repeat center;
   background-color: hsl(174deg, 66%, 33%);
   cursor: pointer;
-}
-
-.container {
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 1rem;
-  color: hsl(225deg, 20%, 60%);
-  width: 55rem;
-  height: 40rem;
-  margin: 5rem auto;
-  margin-top: 20rem;
-  box-shadow: 0 0.8rem 2rem hsla(0deg, 0%, 0%, 0.1);
 }
 .container .title {
   display: grid;
@@ -158,20 +152,21 @@ header p {
 .container .title input {
   grid-column: 1/span 2;
 }
-
-.flex {
+.container .flex {
   display: flex;
   justify-content: space-around;
   padding: 3rem;
 }
-.flex ul {
+.container .flex ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 1rem;
 }
-
-.btn {
+.container .btn {
+  align-self: center;
   background-color: hsl(227deg, 35%, 25%);
+  height: 4rem;
   border-radius: 3rem;
   padding: 0.1rem 2rem;
   color: hsl(226deg, 100%, 87%);
@@ -182,18 +177,17 @@ header p {
   transition: all 0.4s;
   box-shadow: 0.1rem 0.1rem 0.5rem hsl(227deg, 35%, 25%);
 }
-.btn:hover {
+.container .btn:hover {
   background-color: transparent;
   color: hsl(227deg, 35%, 25%);
 }
-
-.name {
+.container .name {
   font-size: 1.4rem;
 }
-.name span {
+.container .name span {
   color: hsl(15deg, 100%, 70%);
   background-color: hsl(14deg, 92%, 95%);
-  font-size: 1.2rem;
+  font-size: 1.5rem -0.3rem;
   padding: 0.2rem 0.6rem;
   border-radius: 3rem;
 }
@@ -205,4 +199,108 @@ header p {
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+@media all and (max-width: 560px) {
+  header h1 {
+    font-size: 2.1rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  .container {
+    width: 32rem;
+    height: auto;
+  }
+  .container .title {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 3.5rem 2rem 2rem 2rem;
+  }
+  .container .title h4 {
+    grid-row: 1;
+    justify-self: auto;
+    font-size: 1.6rem;
+  }
+  .container .title input {
+    grid-row: 2;
+    width: 80%;
+    justify-self: center;
+  }
+  .container .title .price {
+    grid-row: 3;
+    justify-self: auto;
+  }
+  .container .title .price span {
+    font-size: 2.1rem;
+  }
+  .container .slider {
+    height: 0.7rem;
+  }
+  .container .slider::-webkit-slider-thumb {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-size: 70%;
+  }
+  .container .slider::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .container .toggle {
+    margin: 1rem 0;
+    gap: 0.15rem;
+  }
+  .container .toggle .name {
+    font-size: 1.1rem;
+  }
+  .container .toggle .label {
+    padding: 0.1rem;
+    margin: 0 0.2rem;
+    width: 2.5rem;
+    height: 1.3rem;
+  }
+  .container .toggle .ball {
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+  .container .toggle .checkbox:checked + .label .ball {
+    transform: translateX(1.2rem);
+  }
+  .container .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.6rem 2rem 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  .container ul {
+    align-items: center;
+  }
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.1rem 1.3rem;
+    margin: 2rem auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  header {
+    width: 30rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+  header .header-circles {
+    transform: translate(50%);
+    left: 2.5rem;
+    top: -2rem;
+  }
+  .container {
+    margin: 13rem auto 2rem auto;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,133 @@
+@media all and (max-width:560px) {
+
+    $font-size: 1.1rem;
+
+    header {
+        h1 {
+            font-size: $font-size + 1rem;
+        }
+
+        p {
+            font-size: $font-size;
+        }
+    }
+
+    .container {
+        width: 32rem;
+        height: auto;
+
+        .title {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1.2rem;
+            padding: 3.5rem 2rem 2rem 2rem;
+
+            h4 {
+                grid-row: 1;
+                justify-self: auto;
+                font-size: $font-size + 0.5rem;
+            }
+
+            input {
+                grid-row: 2;
+                width: 80%;
+                justify-self: center;
+            }
+
+            .price {
+                grid-row: 3;
+                justify-self: auto;
+
+                span {
+                    font-size: $font-size + 1rem;
+                }
+            }
+        }
+
+        .slider {
+            height: 0.7rem;
+        }
+
+        .slider::-webkit-slider-thumb {
+            width: 1.7rem;
+            height: 1.7rem;
+            background-size: 70%;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .toggle {
+            margin: 1rem 0;
+            gap: 0.15rem;
+
+            .name {
+                font-size: $font-size;
+            }
+
+            .label {
+                padding: 0.1rem;
+                margin: 0 0.2rem;
+                width: 2.5rem;
+                height: 1.3rem;
+            }
+
+            .ball {
+                top: 0.1rem;
+                left: 0.1rem;
+                width: 1.1rem;
+                height: 1.1rem;
+            }
+
+            .checkbox:checked+.label .ball {
+                transform: translateX(1.2rem);
+            }
+        }
+
+        .flex {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2.6rem 2rem 1rem 2rem;
+            font-size: $font-size
+        }
+
+        ul {
+            align-items: center;
+        }
+    }
+
+    .btn {
+        font-size: $font-size;
+        padding: 0.1rem 1.3rem;
+        margin: 2rem auto;
+    }
+}
+
+
+@media screen and (max-width:360px) {
+
+    header {
+        width: 30rem;
+
+        h1 {
+            font-size: $font-size
+        }
+
+        p {
+            font-size: $font-size - 0.3rem;
+        }
+
+        .header-circles {
+            transform: translate(50%);
+            left: 2.5rem;
+            top: -2rem;
+        }
+    }
+
+    .container {
+        margin: 13rem auto 2rem auto;
+    }
+}

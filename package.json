@@ -1,0 +1,18 @@
+{
+  "name": "interactive-pricing-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass css/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kdebala/interactive-pricing-component"
+  },
+  "author": "Katarzyna Dębała",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
